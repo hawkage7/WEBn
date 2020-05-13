@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70.002" height="19.974" viewBox="0 0 70.002 19.974">
+  <defs>
+    <linearGradient id="linear-gradient" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3db2ea"/>
+      <stop offset="0.05" stop-color="#3db2ea"/>
+      <stop offset="0.213" stop-color="#2196d6"/>
+      <stop offset="0.391" stop-color="#087dc5"/>
+      <stop offset="0.5" stop-color="#0075bf"/>
+      <stop offset="0.527" stop-color="#0070bb"/>
+      <stop offset="0.671" stop-color="#005bab"/>
+      <stop offset="0.813" stop-color="#004fa1"/>
+      <stop offset="0.95" stop-color="#004b9e"/>
+      <stop offset="1" stop-color="#004b9e"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <path id="패스_376" data-name="패스 376" d="M100.026,477.687a249.651,249.651,0,0,0,70,0,249.617,249.617,0,0,0-70,0" transform="translate(-100.026 -475.221)" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="symbol_kaist" transform="translate(-100.026 -388.367)">
+    <g id="그룹_284" data-name="그룹 284" transform="translate(107.629 388.367)">
+      <rect id="사각형_50" data-name="사각형 50" width="3.276" height="12.33" transform="translate(25.76 0)" fill="#003483"/>
+      <path id="패스_373" data-name="패스 373" d="M393.79,388.367v2.568h4.123V400.7h3.276v-9.762h4.123v-2.568Z" transform="translate(-350.515 -388.367)" fill="#003483"/>
+      <path id="패스_374" data-name="패스 374" d="M332.243,393.248H329.5c-.727,0-1.317-.3-1.317-1.156s.59-1.156,1.317-1.156h5.889v-2.568h-6.278c-2.344,0-4.244,1.353-4.244,3.724s1.9,3.724,4.244,3.724h2.818c.727,0,1.317.3,1.317,1.157s-.59,1.156-1.317,1.156h-6.606V400.7h6.917c2.344,0,4.243-1.349,4.243-3.722s-1.9-3.727-4.243-3.727" transform="translate(-293.532 -388.367)" fill="#003483"/>
+      <path id="패스_375" data-name="패스 375" d="M159.706,388.367l-4.635,11.1-4.418-4.931,5.525-6.165h-3.743L147.2,394.22v-5.853h-3.277V400.7H147.2v-5.853l5.236,5.853h5.451l3.753-9.3,2.725,6.836h-4.332l1.029,2.462h7.662l-5.151-12.33Z" transform="translate(-143.922 -388.367)" fill="#003483"/>
+    </g>
+    <g id="그룹_286" data-name="그룹 286" transform="translate(100.026 403.41)">
+      <g id="그룹_285" data-name="그룹 285" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <rect id="사각형_51" data-name="사각형 51" width="70.002" height="4.932" transform="translate(0 0)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+  </g>
+</svg>

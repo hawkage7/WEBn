@@ -1,0 +1,37 @@
+/* font */
+@font-face {
+  font-family: "gmarket";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Gmarket Sans Bold"), local("GmarketSans-Bold"),
+    url("../font/GmarketSansBold.woff2") format("woff2"),
+    url("../font/GmarketSansBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "gmarket";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Gmarket Sans Medium"), local("GmarketSans-Medium"),
+    url("../font/GmarketSansMedium.woff2") format("woff2"),
+    url("../font/GmarketSansMedium.woff") format("woff");
+}
+@font-face {
+  font-family: "gmarket";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Gmarket Sans Light"), local("GmarketSans-Light"),
+    url("../font/GmarketSansLight.woff2") format("woff2"),
+    url("../font/GmarketSansLight.woff") format("woff");
+}
+
+body {
+  font-family: "gmarket", "Arial", "sans-serif";
+  word-break: keep-all;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #26263c;
+  letter-spacing: -0.4px;
+}
+
+/* font E */

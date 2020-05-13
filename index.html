@@ -1,52 +1,622 @@
-<!doctype html>
-<html>
+<html lang="ko"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="keyword" content="직강, 원격 강의, 원격과외, 원격강의, 원격으로 강의, 비대면과외">
+    <meta name="title" content="만날 수 없을 때 직강 어때?">
+    <meta name="description" content="만날 수 없을 때 직강 어때? 다르게, 낯설게, 그러나 나답게 직강하다">
+    <meta name="author" content="직강">
+    <meta name="format-detection" content="telephone=no">
 
-  <head>
+    <!-- 오픈그래픽 -->
+    <!-- TODO: 주소입력 -->
+    <meta property="og:type" content="wabsite">
+    <meta property="og:title" content="jikkang">
+    <meta property="og:description" content="만날 수 없을 때 직강 어때?">
+
+    <!-- 타이틀 -->
     <title>직강</title>
-    <meta charset="utf-8">
+
+    <!-- 파비콘 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="260x260" href="images/favicon/260x260.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="images/favicon/android-chrome-256x256.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="150x150" href="images/favicon/mstile-150x150.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="icon" type="image" href="images/favicon/favicon.ico">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#56CDD8">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- css, js -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset_custom.css">
+    <link rel="stylesheet" href="css/typo.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <link rel="stylesheet" href="css/respon-pc.css">
+    <link rel="stylesheet" href="css/respon-mobile.css">
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
+    <script src="js/messages_ko.js"></script>
   </head>
+  <body style="overflow: auto;">
+    <div class="app">
+      <div class="wrapper">
+        <header id="jk-hd">
+          <h1 class="hd-logo img_box">
+            <a href="#"><img src="images/logo/logo_header.svg" alt="jikkang 영문 로고"></a>
+          </h1>
+        </header>
+        <div id="popup1" class="popup-wrapper" style="display: none;">
+          <div class="popup-wrap">
+            <div class="popup-content-wrap">
+              <div class="popup-btn-wrap">
+                <button type="button" class="popup-close" onclick="closeMainPopup()" value="닫기"></button>
+              </div>
+              <div class="popup-content">
+                <img src="images/img/img_popup.png" alt="popup image jikkang">
+              </div>
+              <div class="today-btn-wrap">
+                <button type="button" id="not_today" class="today-btn">
+                  오늘 하루 보지 않기
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="intro active">
+          <div class="overlay-black"></div>
+          <div class="table-center-wrap">
+            <div class="table-center">
+              <div class="section-wrapper">
+                <div class="intro-content">
+                  <div class="border-event active">
+                    <div class="border top"></div>
+                    <div class="border left"></div>
+                    <div class="border right"></div>
+                    <div class="border bot"></div>
+                  </div>
+                  <div class="table-center-wrap">
+                    <div class="table-center">
+                      <h2 class="intro-logo img_box clearfix">
+                        <img src="images/logo/logo_main.svg" alt="직강 로고">
+                      </h2>
+                      <svg class="text-ani">
+                        <text class="in-text" x="0.5%" y="39%">
+                          만날 수 없을 때
+                        </text>
+                        <text class="in-text" x="13%" y="85.4%">
+                          직강 어때?
+                        </text>
+                      </svg>
+                      <div class="text-ani-ie ie-view">
+                        <p>만날 수 없을 때</p>
+                        <p>작겅 어때?</p>
+                      </div>
 
-  <body>
-    <h1>직강닷컴</h1>
+                      <div class="in-desc">
+                        <p>다르게, 낯설게,</p>
+                        <p>그러나 나답게 직강하다.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="scroll-icon-wrap">
+                  <div class="scroll-icon fix">
+                    <img src="images/icon/icon-scroll-fix.svg" alt="스크롤 이미지">
+                  </div>
+                  <div class="scroll-icon move">
+                    <img src="images/icon/icon-arrow-down.svg" alt="화살표 이미지">
+                  </div>
+                </div>
+              </div>
+              <!-- E section-wrapper -->
+            </div>
+          </div>
+        </section>
+        <!-- E intro -->
+        <section class="info">
+          <div class="info-content tax-wrap active">
+            <div class="section-wrapper">
+              <div class="border-event mini active">
+                <div class="border top"></div>
+                <div class="border left"></div>
+                <div class="border right"></div>
+                <div class="border bot"></div>
+              </div>
+              <div class="in-desc">
+                <h2 class="_title">
+                  내가 원하는<br>
+                  시간과 장소에서,<br>
+                  원하는 만큼만<br>
+                  직강하다.
+                </h2>
+                <div class="_txt">
+                  국내 최저 수수료, 편리하고 효율적인 강의지원 시스템.<br>
+                  대한민국은 물론 전 세계의 학생들이<br>
+                  여러분들을 기다리고 있습니다.<br>
+                  실시간 쌍방향 일대일 화상수업, 직강.<br>
+                  음성과 필기노트를 언제든 저장/공유하고<br>
+                  상호 피드백이 가능합니다.
+                </div>
+              </div>
+            </div>
+            <div class="in-img img_box">
+              <img src="images/img/info_img_01.png" alt="강의지원">
+            </div>
+          </div>
+          <div class="info-content why-wrap active">
+            <div class="section-wrapper">
+              <div class="border-event mini active">
+                <div class="border top"></div>
+                <div class="border left"></div>
+                <div class="border right"></div>
+                <div class="border bot"></div>
+              </div>
+              <div class="in-desc">
+                <h2 class="_title">
+                  왜,<br>
+                  직강인가?
+                </h2>
+                <div class="_txt">
+                  내년에도 대면 과외가 가능할까요?<br>
+                  내신, 수능, 유학대비를 넘어서<br>
+                  예체능 레슨까지, 세상의 모든강의.<br>
+                  완벽한 수업준비, 효율적인 직강 시스템으로<br>
+                  강의 전후까지 올인원으로 해결.
+                </div>
+              </div>
+            </div>
+            <div class="in-img img_box">
+              <img src="images/img/info_img_02.png" alt="공부">
+            </div>
+          </div>
+        </section>
+        <!-- E info -->
+        <div class="study">
+          <div class="study-wrapper teacher active">
+            <div class="section-wrapper">
+              <div class="svg-icon-area">
+                <svg id="icon_board" data-name="icon board" xmlns="http://www.w3.org/2000/svg" width="68.566" height="50.486" viewBox="0 0 68.566 50.486">
+                  <g id="그룹_257" data-name="그룹 257">
+                    <path id="패스_268" data-name="패스 268" d="M68.566,43.18H0V0H68.566ZM4,39.18H64.566V4H4Z" fill="#15375a"></path>
+                    <path id="패스_269" data-name="패스 269" d="M68.566,50.486H0V39.18H68.566ZM4,46.486H64.566V43.18H4Z" fill="#15375a"></path>
+                    <rect id="사각형_50" data-name="사각형 50" width="4" height="11.441" transform="translate(12.847 13.518)" fill="#15375a"></rect>
+                    <rect id="사각형_51" data-name="사각형 51" width="4" height="11.441" transform="translate(37.614 13.518)" fill="#15375a"></rect>
+                    <rect id="사각형_52" data-name="사각형 52" width="4" height="11.441" transform="translate(25.23 13.518)" fill="#15375a"></rect>
+                    <rect id="사각형_53" data-name="사각형 53" width="11.441" height="4" transform="translate(21.51 17.239)" fill="#15375a"></rect>
+                    <path id="패스_270" data-name="패스 270" d="M56.635,43.18H40a2,2,0,0,1-2-2V35.063a2,2,0,0,1,2-2H56.635a2,2,0,0,1,2,2V41.18A2,2,0,0,1,56.635,43.18ZM42,39.18H54.635V37.063H42Z" fill="#15375a"></path>
+                  </g>
+                </svg>
+              </div>
+              <svg class="text-ani">
+                <text class="in-text" x="1em" y="39%">
+                  직강
+                </text>
+                <text class="in-text" x="0%" y="86%">
+                  강사되기
+                </text>
+              </svg>
+              <div class="text-ani-ie ie-view">
+                <p>직강</p>
+                <p>강사되기</p>
+              </div>
+              <div class="content-wrap">
+                <!-- flexitems -->
+                <div class="study-content study-con1">
+                  <div class="in-title">
+                    <span>등록</span>
+                  </div>
+                </div>
+                <div class="study-content study-con2">
+                  <div class="in-title">
+                    <span>
+                      심사 <br>
+                      <b class="_light">(증빙서류)</b>
+                    </span>
+                  </div>
+                </div>
+                <div class="study-content study-con3">
+                  <div class="in-title">
+                    <span>
+                      심층면접 및<br>
+                      강의교육
+                    </span>
+                  </div>
+                </div>
+                <div class="study-content study-con4">
+                  <div class="in-title">
+                    <span>강사등록</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="study-wrapper student active">
+            <div class="section-wrapper">
+              <div class="svg-icon-area">
+                <svg id="icon_pen" data-name="icon pen" xmlns="http://www.w3.org/2000/svg" width="51.879" height="51.544" viewBox="0 0 51.879 51.544">
+                  <g id="그룹_258" data-name="그룹 258">
+                    <path id="패스_271" data-name="패스 271" d="M14.3,46.444h0a2,2,0,0,1-1.414-.586l-7.2-7.2a2,2,0,0,1,0-2.828L32.907,8.607a2,2,0,0,1,1.414-.586h0a2,2,0,0,1,1.414.586l7.2,7.2a2,2,0,0,1,0,2.828L15.715,45.858A2,2,0,0,1,14.3,46.444Zm-4.373-9.2L14.3,41.616,38.694,17.223,34.321,12.85Z" fill="#29dbdb"></path>
+                    <path id="패스_272" data-name="패스 272" d="M41.514,20.04,31.494,10.02,41.514,0l10.02,10.02ZM37.15,10.02l4.364,4.363,4.364-4.363L41.514,5.656Z" fill="#29dbdb"></path>
+                    <path id="패스_273" data-name="패스 273" d="M2,51.544A2,2,0,0,1,.152,48.778l5.1-12.3a2,2,0,0,1,3.262-.649l7.2,7.2a2,2,0,0,1-.648,3.262l-12.3,5.1A2.008,2.008,0,0,1,2,51.544Zm5.8-10.77L5.7,45.846l5.071-2.1Z" fill="#29dbdb"></path>
+                    <rect id="사각형_54" data-name="사각형 54" width="51.879" height="4" transform="translate(0 47.544)" fill="#29dbdb"></rect>
+                  </g>
+                </svg>
+              </div>
+              <svg class="text-ani">
+                <text class="in-text" x="1em" y="39%">
+                  직강
+                </text>
+                <text class="in-text" x="0%" y="90%">
+                  수업듣기
+                </text>
+              </svg>
+              <div class="text-ani-ie ie-view">
+                <p>직강</p>
+                <p>수업듣기</p>
+              </div>
+              <div class="content-wrap">
+                <!-- flexitems -->
+                <div class="study-content study-con1">
+                  <div class="in-title">
+                    <span>
+                      직강 본사<br>
+                      1차 매칭
+                    </span>
+                  </div>
+                </div>
+                <div class="study-content study-con2">
+                  <div class="in-title">
+                    <span>
+                      학생-선생님<br>
+                      30분<br>
+                      시강 수업
+                    </span>
+                  </div>
+                </div>
+                <div class="study-content study-con3">
+                  <div class="in-title">
+                    <span>
+                      학생<br>
+                      수락
+                    </span>
+                  </div>
+                </div>
+                <div class="study-content study-con4">
+                  <div class="in-title">
+                    <span>
+                      수강료<br>
+                      등록
+                    </span>
+                  </div>
+                </div>
+                <div class="study-content study-con5">
+                  <div class="in-title">
+                    <span>
+                      아이패드<br>
+                      지급
+                    </span>
+                  </div>
+                </div>
+                <div class="study-content study-con6">
+                  <div class="in-title">
+                    <span>수업진행</span>
+                  </div>
+                </div>
+              </div>
+              <!-- E flex -->
+            </div>
+          </div>
+        </div>
+        <!-- E study -->
+        <div class="user">
+          <div class="user-student-wrap">
+            <div class="top-content">
+              <!-- object -->
+              <div class="object-img-wrapper">
+                <div class="object-img-wrap">
+                  <div class="ob-circle-wrap">
+                    <div class="ob-circle ob-circle1"></div>
+                    <div class="ob-circle ob-circle2">
+                      <div class="ob-dot ob-dot1"></div>
+                    </div>
+                    <div class="ob-circle ob-circle3">
+                      <div class="ob-dot ob-dot2"></div>
+                      <div class="ob-dot ob-dot3"></div>
+                    </div>
+                    <div class="ob-circle ob-circle4">
+                      <div class="ob-dot ob-dot4"></div>
+                      <div class="ob-dot ob-dot5"></div>
+                      <div class="ob-dot ob-dot6"></div>
+                    </div>
+                  </div>
+                  <div class="img_box">
+                    <img src="images/logo/logo_contents.svg" alt="직강 로고">
+                  </div>
+                  <div class="school-logo-wrap">
+                    <div class="symbol-logo symbol-kaist">
+                      <img src="images/icon/symbol_kaist.svg" alt="카이스트 로고">
+                    </div>
+                    <div class="symbol-logo symbol-korea">
+                      <img src="images/icon/symbol_korea.svg" alt="고려대 로고">
+                    </div>
+                    <div class="symbol-logo symbol-postech">
+                      <img src="images/icon/symbol_postech.svg" alt="포스텍 로고">
+                    </div>
+                    <div class="symbol-logo symbol-seoul">
+                      <img src="images/icon/symbol_seoul.svg" alt="서울대 로고">
+                    </div>
+                    <div class="symbol-logo symbol-yonsei">
+                      <img src="images/icon/symbol_yonsei.svg" alt="연세대 로고">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- E object -->
+              <div class="_text">
+                강사의 출신대학, 강의방법/수준이<br class="mobile-br">
+                천차만별.<br>
+                정말<b>학생의 수준을 최우선한 알찬 수업</b>은
+                <br class="mobile-br">가능한가요?
+              </div>
+            </div>
+            <div class="section-wrapper">
+              <div class="bottom-content-wrap">
+                <div class="deco-stick"></div>
+                <div class="bottom-content">
+                  <img src="images/img/bg_img_01.jpg" alt="background image" class="bg-img">
+                  <div class="flex-wrap">
+                    <p class="in-desc">
+                      <b class="_color _big">jks</b>
+                      <b class="_color">J</b>ik강 쌤이 되시려면 팩트 서류<br>
+                      <b class="_color">K</b>ang사님의 수업역량과 열정<br>
+                      <b class="_color">S</b>sam 한 분 한 분 만나서<br>
+                      얘기해보고 결정하게 됩니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- E user student -->
+          <div class="user-teacher-wrap">
+            <div class="top-content">
+              <div class="image-wrap">
+                <img src="images/img/img_illust.svg" alt="일러스트 캐릭터그림. 터무니없는 수수료, 직강에서는 0원!">
+                <div class="objt-circle-wrap">
+                  <div class="objt-circle circle1"></div>
+                  <div class="objt-circle circle2"></div>
+                  <div class="objt-circle circle3"></div>
+                </div>
+              </div>
+              <div class="_text">
+                <b>
+                  부당한 수수료 No!<br>
+                  열정페이 No!<br>
+                </b>
+                합리적인 서버 운영비만으로<br>
+                최적의 강의지원 시스템을 운영합니다.
+              </div>
+            </div>
+            <div class="section-wrapper">
+              <div class="bottom-content-wrap">
+                <div class="deco-stick"></div>
+                <div class="bottom-content">
+                  <img src="images/img/bg_img_02.jpg" alt="background image" class="bg-img">
+                  <div class="flex-wrap">
+                    <p class="in-desc">
+                      <b class="_color">간결한</b> 설명,
+                      <b class="_color">깊은</b> 이해.<br>
+                      직강이 추구하는<br>
+                      또 다른 교육 플랫폼.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content-description">
+              <p>
+                질 높은 과외 서비스를 현실적으로<br class="mobile-br">
+                제공함으로써<br class="pc-br">
+                공간적 장벽을 넘고,<br>
+                줄세우기 경쟁에서 평등한 교육기회를<br class="mobile-br">
+                제공하는<br class="pc-br">
+                <b class="_highlight">선도적인 EduTech기업.<br></b>
+                강사와 학생 그리고 학부모님의 입장에서<br>
+                고민하고 배려하는 직강이 되겠습니다.
+              </p>
+            </div>
+          </div>
+          <!-- E user teacher -->
+        </div>
+        <!-- E user -->
+        <section class="contect">
+          <div class="section-wrapper">
+            <h2 class="_title">
+              <span class="in-tit">
+                직강강사<br>
+                사전예약하기
+              </span>
+              <span class="in-desc">
+                빵터지는 성적은 오로지 <br class="mobile-br">속터지는 공부를
+                통해서만 가능합니다.<br>
+                최고의 아웃풋, 직강 강사 여러분과 학생이
+                <br class="mobile-br">함께 만들어 갑시다.<br>
+                다르게, 낯설게 그러나 나답게 직강하다.
+              </span>
+            </h2>
 
-    <h2>  <ol>
-      <li>
-        <a href="file:///C:/Users/user/Desktop/web/1.html"
-            target="_blank" title="강사">강사</a></li>
-      <li>
-        <a href="file:///C:/Users/user/Desktop/web/2.html"
-            target="_blank" title="학생">학생</a></li>
-      <li>
-        <a href="file:///C:/Users/user/Desktop/web/3.html"
-            target="_blank" title="학생">학부모</a></li>
-    </ol> </h2>
+            <form id="send_form" novalidate="novalidate">
+              <fieldset>
+                <legend class="dp_none"></legend>
+                <div class="contect-input-wrapper">
+                  <div class="contect-input-wrap">
+                    <label class="contect-title" for="name">이름</label>
+                    <div class="input-group">
+                      <input class="contect-input" id="name" name="name" type="text" placeholder="이름을 입력하세요">
+                      <div class="line-animation"></div>
+                    </div>
+                    <p class="error-msg"></p>
+                  </div>
+                  <div class="contect-input-wrap">
+                    <label class="contect-title" for="birth">생년월일</label>
+                    <div class="input-group">
+                      <input class="contect-input" id="birth" name="birth" type="tel" placeholder="6자리로 입력하세요 예)901020" maxlength="6">
+                      <div class="line-animation"></div>
+                    </div>
+                    <p class="error-msg"></p>
+                  </div>
+                  <div class="contect-input-wrap">
+                    <label class="contect-title" for="tel">연락처</label>
+                    <div class="input-group">
+                      <input class="contect-input" id="tel" name="tel" type="tel" placeholder="연락처를 -없이 입력하세요">
+                      <div class="line-animation"></div>
+                    </div>
+                    <p class="error-msg"></p>
+                  </div>
+                  <div class="contect-input-wrap">
+                    <label class="contect-title" for="subject">강의과목</label>
+                    <div class="input-group">
+                      <select class="contect-input select" name="subject" id="subject">
+                        <option value="수리">수리</option>
+                        <option value="언어">언어</option>
+                        <option value="영어">영어</option>
+                        <option value="탐구영역">탐구영역</option>
+                        <option value="제2외국어">제2외국어</option>
+                      </select>
+                      <div class="line-animation"></div>
+                    </div>
+                  </div>
+                  <div class="contect-input-wrap">
+                    <label class="contect-title" for="school">졸업/재학학교</label>
+                    <div class="input-group">
+                      <input class="contect-input" id="school" name="school" type="text" placeholder="학교를 입력하세요">
+                      <div class="line-animation"></div>
+                    </div>
+                    <p class="error-msg"></p>
+                  </div>
+                  <div class="contect-input-wrap">
+                    <label class="contect-title" for="curri">졸업/재학학과</label>
+                    <div class="input-group">
+                      <input class="contect-input" id="curri" name="curri" type="text" placeholder="학과를 입력하세요">
+                      <div class="line-animation"></div>
+                    </div>
+                    <p class="error-msg"></p>
+                  </div>
+                  <div class="contect-input-wrap _solo">
+                    <label class="contect-title" for="introduce">자기소개</label>
+                    <div class="input-group">
+                      <textarea class="contect-input introduce" name="introduce" id="introduce" placeholder="본인을 표현할 수 있는 소개글을 자유롭게 써주세요:)"></textarea>
+                      <div class="line-animation"></div>
+                    </div>
+                    <p class="error-msg"></p>
+                  </div>
+                </div>
+                <div class="contect-btn-wrap">
+                  <button class="contect-btn" type="submit">신청완료</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </section>
+        <!-- E contect -->
+        <div class="top-btn-wrap">
+          <button type="button" class="go_top" onclick="go_top()">
+            위로가기
+          </button>
+        </div>
+        <footer class="jk-ft">
+          <h2 class="in-title img-box">
+            <img src="images/logo/logo_footer.svg" alt="직강 한글로고">
+          </h2>
+          <div class="_txt">
+            대표 윤성진 ㅣ 주식회사 직강
+          </div>
+        </footer>
+      </div>
+      <!-- E wrapper -->
+    </div>
+    <script src="js/ui.js"></script>
+    <script>
+      $("#send_form").validate({
+        errorElement: "span",
+        errorPlacement: function (error, element) {
+          error.appendTo(element.parent("div").next("p"));
+        },
+        submitHandler: function () {
+          var data = $("#send_form")
+            .serializeArray()
+            .map(function (x) {
+              return $("[for='" + x.name + "']").text() + ": " + x.value;
+            })
+            .join("\n");
+          $.ajax({
+            type: "POST",
+            url: "/send",
+            async: false,
+            data: {
+              to: "jikkang.no1@gmail.com",
+              subject: "직강 선생님 신청이 왔습니다!",
+              text: data,
+            },
+            success: function () {
+              alert("신청이 완료되었습니다.");
+              window.location.replace("");
+            },
+          });
+        },
+        rules: {
+          name: {
+            required: true,
+          },
+          birth: {
+            required: true,
+            digits: true,
+            minlength : 6,
+          },
+          tel: {
+            required: true,
+            digits: true,
+            minlength : 9,
+          },
+          school: {
+            required: true,
+          },
+          curri: {
+            required: true,
+          },
+          introduce: {
+            required: true,
+          },
+        },
+        messages: {
+          name: {
+            required: "필수로 입력하는 정보입니다.",
+          },
+          birth: {
+            required: "필수로 입력하는 정보입니다.",
+            digits: "숫자만 입력해주세요.",
+          },
+          tel: {
+            required: "필수로 입력하는 정보입니다.",
+            digits: "-빼고 숫자만 입력해주세요.",
+          },
+          school: {
+            required: "필수로 입력하는 정보입니다.",
+          },
+          curri: {
+            required: "필수로 입력하는 정보입니다.",
+          },
+          introduce: {
+            required: "필수로 입력하는 정보입니다.",
+          },
+        },
+      });
+    </script>
+  
 
-    <p style="margin-top:40px">
-      <h3>
-      만날필요 없는 원격과외 솔루션<br>
-      </h3>
-    </p>
-    <p>
-      <h4>
-      꼭 맞는 선생님과 학생이 만날 수 있도록
-      </h4>
-    </p>
-    <p style="margin-top:40px">
-      <h3>
-        국내 최저 수수로,<br>
-        편리하고 효율적인<br>
-        강의 지원.
-      </h3>
-    </p>
-    <p>
-      <h4>
-        대한민국은 물론 전 세계의 학생들을 대상으로<br>
-        여러분의 잠재력을 보여주세요.<br>
-        실시간 쌍방향 일대일 화상수업, 직강!
-      </h4>
-    </p>
-
-
-  </body>
-
-</html>
+</body></html>

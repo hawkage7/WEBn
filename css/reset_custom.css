@@ -1,0 +1,148 @@
+/* reset costom */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1f1f;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+select {
+  padding: 5px 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+address {
+  font-style: normal;
+}
+
+h2 {
+  font-size: 3.75em;
+}
+
+h3 {
+  font-size: 2.125em;
+}
+/* reset costom E */
+
+a[href^="tel"] {
+  color: inherit; /* Inherit text color of parent element. */
+  text-decoration: none; /* Remove underline. */
+  /* Additional css `propery: value;` pairs here */
+}
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+input[type="text"], input[type="tel"], textarea {
+  border: 0px none;
+  outline: 0px none;
+  padding: 0px;
+  border-radius: 0px;
+  -ms-progress-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  resize: none;
+}
